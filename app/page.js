@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 import GlobalUI from '../components/GlobalUI';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa6';
+import { MapPin, GraduationCap } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -22,31 +23,29 @@ export default function Home() {
       <Projects />
       <Contact />
       
-      <footer className="py-12 border-t border-neutral-900 bg-neutral-950/50 mt-20">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-          <div>
-            <h3 className="font-bold text-xl text-white mb-2">Aaditya Kumar</h3>
-            <p className="text-neutral-500">Full Stack MERN Developer</p>
+      <footer className="py-12 border-t border-neutral-900 bg-neutral-950/50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-2">Aaditya Kumar</h3>
+          <p className="text-neutral-400 mb-6 font-semibold">Full Stack MERN Developer</p>
+          
+          <div className="flex justify-center gap-6 mb-8">
+            <a href="https://www.linkedin.com/in/aaditya-kumar-6271672b2" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-blue-500 transition-colors active:scale-90"><FaLinkedin size={22} /></a>
+            <a href="https://github.com/aadityak09771-sudo" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors active:scale-90"><FaGithub size={22} /></a>
+            <a href="https://wa.me/919696338646" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-emerald-500 transition-colors active:scale-90"><FaWhatsapp size={22} /></a>
           </div>
-          <div className="flex md:justify-end gap-6 font-medium">
-            <a href="#home" className="text-neutral-500 hover:text-white transition-colors">Home</a>
-            <a href="#about" className="text-neutral-500 hover:text-white transition-colors">About</a>
-            <a href="#projects" className="text-neutral-500 hover:text-white transition-colors">Projects</a>
-            <a href="#contact" className="text-neutral-500 hover:text-white transition-colors">Contact</a>
+          
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm mb-8">
+            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-neutral-300">
+              <MapPin size={16} className="text-emerald-400" />
+              <span>Kanpur, India</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-neutral-300">
+              <GraduationCap size={16} className="text-purple-400" />
+              <span>BCA Graduate - 2026</span>
+            </div>
           </div>
-        </div>
-        <div className="max-w-6xl mx-auto px-6 mt-8 flex justify-center md:justify-end gap-6">
-           <a href="https://www.linkedin.com/in/aaditya-kumar-6271672b2" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-blue-500 transition-colors"><FaLinkedin size={20} /></a>
-           <a href="https://github.com/aadityak09771-sudo" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-white transition-colors"><FaGithub size={20} /></a>
-           <a href="https://wa.me/919696338646" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-emerald-500 transition-colors"><FaWhatsapp size={20} /></a>
-        </div>
-        <div className="text-center mt-8">
-          <a href="#home" className="inline-block bg-neutral-900 hover:bg-neutral-800 text-neutral-400 p-2 rounded-full transition-colors">
-            ↑ Back to Top
-          </a>
-        </div>
-        <div className="text-center text-neutral-600 mt-12 pt-8 border-t border-neutral-900 text-xs">
-          <p>© {new Date().getFullYear()} Aaditya Kumar. All rights reserved.</p>
+
+          <p className="text-neutral-600 text-xs">© {new Date().getFullYear()} Aaditya Kumar. All rights reserved.</p>
         </div>
       </footer>
     </main>

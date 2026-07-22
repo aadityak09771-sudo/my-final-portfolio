@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { ExternalLink, ImageIcon } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa6';
+import { FaGithub, FaReact, FaDumbbell, FaHtml5 } from 'react-icons/fa6';
+import { SiNextdotjs } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 export default function Projects() {
@@ -12,52 +13,51 @@ export default function Projects() {
       description: 'A comprehensive mock test platform for students, featuring timed quizzes, performance tracking, and detailed analytics.',
       tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
       githubUrl: 'https://github.com/aadityak09771-sudo/gurukul-mock-test',
-      liveUrl: null,
+      liveUrl: 'https://gurukul-mock-test.vercel.app/',
+      icon: <FaReact className="text-sky-400" />
     },
     {
       title: 'Barcode Cafe',
       description: 'A modern web application for a cafe, featuring a digital menu, order management, and a clean user interface.',
       tech: ['React.js', 'Firebase', 'Tailwind CSS'],
       githubUrl: 'https://github.com/aadityak09771-sudo/barcode-caffe',
-      liveUrl: null,
+      liveUrl: 'https://barcode-caffe.vercel.app/',
+      icon: <FaReact className="text-sky-400" />
     },
     {
       title: 'Toppers Siksha Kendra',
       description: 'An educational portal for a coaching center, providing course information, student registration, and learning resources.',
       tech: ['React.js', 'Node.js', 'MongoDB', 'Razorpay'],
       githubUrl: 'https://github.com/aadityak09771-sudo/toppers_siksha_kendra',
-      liveUrl: null,
+      liveUrl: 'https://toppers-siksha-kendra.vercel.app/',
+      icon: <FaReact className="text-sky-400" />
     },
     {
       title: 'Gym App Plan',
       description: 'A fitness application for creating and tracking workout plans, with exercises, sets, and reps management.',
       tech: ['React.js', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/aadityak09771-sudo/gym-app-plan',
-      liveUrl: null,
+      liveUrl: 'https://gym-app-plan.vercel.app/',
+      icon: <FaDumbbell className="text-red-400" />
     },
     {
       title: 'Apex Arena Gym',
       description: 'A promotional website for a gym, showcasing facilities, membership plans, and trainer profiles with a modern design.',
       tech: ['HTML5', 'CSS3', 'JavaScript'],
       githubUrl: 'https://github.com/aadityak09771-sudo/apex-arena-gym',
-      liveUrl: null,
+      liveUrl: 'https://apex-arena-gym.vercel.app/',
+      icon: <FaHtml5 className="text-orange-400" />
     }
   ];
 
   const secondaryProjects = [
-    {
-      title: 'Student Dashboard',
-      description: 'A MERN stack student management and learning tracking platform with data visualization and progress monitoring.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
-      githubUrl: 'https://github.com/aadityak09771-sudo/Student-Dashboard',
-      liveUrl: null,
-    },
     {
       title: 'Portfolio Website',
       description: 'This personal portfolio, built with Next.js, Tailwind CSS, and Framer Motion, deployed on Vercel.',
       tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
       githubUrl: 'https://github.com/aadityak09771-sudo/my-portfolio',
       liveUrl: '#', // Link to the current site
+      icon: <SiNextdotjs className="text-white" />
     }
   ];
 
@@ -89,9 +89,12 @@ export default function Projects() {
       className="group bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 flex flex-col relative hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/30 p-6"
     >
       <div className="flex-1 flex flex-col">
-        <h3 className="text-xl font-bold mb-3 text-white transition-colors duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-500">
-          {project.title}
-        </h3>
+        <div className="flex items-center gap-3 mb-3">
+          {project.icon}
+          <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-500">
+            {project.title}
+          </h3>
+        </div>
         <p className="text-neutral-400 mb-6 text-sm flex-grow">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((t, i) => (
@@ -109,7 +112,7 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="py-24 px-6 max-w-6xl mx-auto bg-neutral-950/50 pt-28">
+    <section id="projects" className="py-24 px-6 max-w-6xl mx-auto bg-neutral-950/50">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

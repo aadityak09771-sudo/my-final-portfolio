@@ -49,7 +49,7 @@ export default function HeroSection() {
       <div className="z-10 text-center px-6 py-10 backdrop-blur-sm bg-black/20 rounded-3xl border border-white/10 pointer-events-auto">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs md:text-sm font-medium mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Available For MERN Stack Roles
+          Available for MERN Stack, Freelance & Full-time Roles
         </div>
         <p className="text-blue-400 font-medium mb-2 tracking-widest uppercase">HELLO, I'M</p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white">
